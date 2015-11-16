@@ -1,0 +1,38 @@
+<h2>Systems</h2>
+
+<!-- Add System -->
+<div class="row">
+	<div class="col col-md-10">
+		<input ng-model="newSystemName" />
+	</div>
+	<div class="col col-md-2">
+		<div class="btn btn-primary" 
+			 ng-click="sysCtrl.uiAddSystem(newSystemName)">Add</div>
+	</div>
+</div>
+
+
+<!-- List Systems -->
+<div class="row" ng-repeat="system in sysCtrl.systems">
+	<div class="col col-md-4">
+		<a ui-sref="public.system({id:system.id})">
+			<h3 ng-bind="system.name"></h3>
+		</a>
+		<p ng-bind="system.description"></p>
+	</div>
+	<div class="col col-md-4">
+		<h4>Parameters</h4>
+		<ul>
+			<li ng-repeat="(id, param) in system.parameters"
+				ng-bind="param.name"></li>
+		</ul>
+	</div>
+
+	<div class="col col-md-4">
+		<h4>Relations</h4>
+		<ul>
+			<li ng-repeat="(id, relation) in system.relations"
+				ng-bind="relation.name"></li>
+		</ul>
+	</div>
+</div>

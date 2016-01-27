@@ -9,8 +9,8 @@ describe('Controller: AboutCtrl', () => {
   // load the controller's module
   beforeEach(module('ecoSimApp'));
 
-  var AboutCtrl: ecoSimApp.AboutCtrl,
-    scope: ecoSimApp.IAboutScope;
+  var AboutCtrl: tsApp.AboutCtrl,
+    scope: tsApp.IAboutScope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(($controller: ng.IControllerService, $rootScope: ng.IRootScopeService) => {

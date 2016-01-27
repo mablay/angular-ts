@@ -7,14 +7,10 @@
 /// <reference path="services/relation.ts" />
 
 
-module ecoSimApp {
+module tsApp {
   'use strict';
 
-  declare var woodman: any;
-
-  export var log: any;
-
-  export class EcoSim {
+  export class App {
 
     app: ng.IModule;
 
@@ -42,48 +38,57 @@ module ecoSimApp {
             views: {
               "": {
                 templateUrl: "views/layout-public.html"
-              },
-              "nav@public": {
-                templateUrl: 'views/navbar.html',
-                controller: 'NavigationCtrl'
               }
             }
           })
-          .state('public.main', {
+          .state('public.home', {
             url: '/',
             templateUrl: 'views/main.html',
-            controller: 'MainCtrl'
+            controller: 'MainCtrl',
+            controllerAs: 'vc'
           })
-          .state('public.systems', {
-            url: '/systems',
-            templateUrl: 'views/systems.html',
-            controller: 'SystemsCtrl',
-            controllerAs: 'sysCtrl'
+          .state('public.login', {
+            url: '/login',
+            templateUrl: 'views/login.html',
+            controller: 'LoginCtrl',
+            controllerAs: 'login'
           })
-          .state('public.system', {
-            url: '/system/:id',
-            templateUrl: 'views/system-detail.html',
-            controller: 'SystemDetailCtrl',
-            controllerAs: 'sysCtrl'
+          .state('public.register', {
+            url: '/register',
+            templateUrl: 'views/register.html',
+            controller: 'RegisterCtrl',
+            controllerAs: 'register'
           })
-          .state('public.parameters', {
-            url: '/parameters',
-            templateUrl: 'views/parameters.html',
-            controller: 'ParametersCtrl'
+          .state('private', {
+            abstract: true,
+            views: {
+              "": {
+                templateUrl: "views/layout-private.html"
+              },
+              "nav@private": {
+                templateUrl: 'views/navbar.html',
+                controller: 'NavigationCtrl',
+                controllerAs: 'nav'
+              }
+            }
           })
-          .state('public.relations', {
-            url: '/relations',
-            templateUrl: 'views/relations.html',
-            controller: 'RelationsCtrl'
+          .state('private.home', {
+            url: '/home',
+            templateUrl: 'views/home.html',
+            controller: 'HomeCtrl',
+            controllerAs: 'vc'
+          })
+          .state('private.todos', {
+            url: '/todos',
+            templateUrl: 'views/todos.html',
+            controller: 'TodoCtrl',
+              controllerAs: 'todoCtrl'
           });
 
       });
       
       this.app.run(function(){
-        // Using Woodman                            // Using the console
-        woodman.load('console');
-        log = woodman.getLogger('myapp');
-        log.log('Hello Woodman');
+        console.log('[App] running');
       });
 
     }
@@ -100,6 +105,6 @@ module ecoSimApp {
 
 
 
-  new ecoSimApp.EcoSim('ecoSimApp').bootstrapWhenReady();
+  new tsApp.App('tsApp').bootstrapWhenReady();
 
 }

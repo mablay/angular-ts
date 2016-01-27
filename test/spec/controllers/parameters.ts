@@ -9,8 +9,8 @@ describe('Controller: ParametersCtrl', () => {
   // load the controller's module
   beforeEach(module('ecoSimApp'));
 
-  var ParametersCtrl: ecoSimApp.ParametersCtrl,
-    scope: ecoSimApp.IParametersScope;
+  var ParametersCtrl: tsApp.ParametersCtrl,
+    scope: tsApp.IParametersScope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(($controller: ng.IControllerService, $rootScope: ng.IRootScopeService) => {

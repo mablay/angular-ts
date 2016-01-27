@@ -1,5 +1,5 @@
 {
-  "name": "ecosim",
+  "name": "angular-ts",
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",

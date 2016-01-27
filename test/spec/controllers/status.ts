@@ -9,8 +9,8 @@ describe('Controller: StatusCtrl', () => {
   // load the controller's module
   beforeEach(module('ecoSimApp'));
 
-  var StatusCtrl: ecoSimApp.StatusCtrl,
-    scope: ecoSimApp.IStatusScope;
+  var StatusCtrl: tsApp.StatusCtrl,
+    scope: tsApp.IStatusScope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(($controller: ng.IControllerService, $rootScope: ng.IRootScopeService) => {

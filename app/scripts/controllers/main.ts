@@ -2,7 +2,7 @@
 
 'use strict';
 
-module ecoSimApp {
+module tsApp {
   export interface IMainScope extends ng.IScope {
     awesomeThings: any[];
   }
@@ -11,11 +11,11 @@ module ecoSimApp {
     // @ngInject
     constructor (private $scope: IMainScope) {
 
-      log.log('asdf');
+      console.log('[MainCtrl] constructor');
 
     }
   }
 }
 
-angular.module('ecoSimApp')
-  .controller('MainCtrl', ecoSimApp.MainCtrl);
+angular.module('tsApp')
+  .controller('MainCtrl', tsApp.MainCtrl);

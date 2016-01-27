@@ -9,8 +9,8 @@ describe('Controller: InstancesCtrl', () => {
   // load the controller's module
   beforeEach(module('ecoSimApp'));
 
-  var InstancesCtrl: ecoSimApp.InstancesCtrl,
-    scope: ecoSimApp.IInstancesScope;
+  var InstancesCtrl: tsApp.InstancesCtrl,
+    scope: tsApp.IInstancesScope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(($controller: ng.IControllerService, $rootScope: ng.IRootScopeService) => {

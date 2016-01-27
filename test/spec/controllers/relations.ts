@@ -9,8 +9,8 @@ describe('Controller: RelationsCtrl', () => {
   // load the controller's module
   beforeEach(module('ecoSimApp'));
 
-  var RelationsCtrl: ecoSimApp.RelationsCtrl,
-    scope: ecoSimApp.IRelationsScope;
+  var RelationsCtrl: tsApp.RelationsCtrl,
+    scope: tsApp.IRelationsScope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(($controller: ng.IControllerService, $rootScope: ng.IRootScopeService) => {

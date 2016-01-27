@@ -2,7 +2,7 @@
 
 'use strict';
 
-module ecoSimApp {
+module tsApp {
 	export interface INavigationScope extends ng.IScope {
 		menuItems: any[];
 	}
@@ -22,6 +22,6 @@ module ecoSimApp {
 	}
 }
 
-angular.module('ecoSimApp')
-	.controller('NavigationCtrl', ecoSimApp.NavigationCtrl);
+angular.module('tsApp')
+	.controller('NavigationCtrl', tsApp.NavigationCtrl);
 

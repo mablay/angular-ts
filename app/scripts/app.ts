@@ -1,6 +1,5 @@
-/// <reference path="../../typings/angularjs/angular.d.ts" />
-/// <reference path="../../typings/angular-ui-router/angular-ui-router.d.ts" />
-/// <reference path="../../typings/lodash/lodash.d.ts" />
+/// <reference path="../../typings/browser.d.ts" />
+
 /// <reference path="models/status-model.ts" />
 /// <reference path="models/system-model.ts" />
 /// <reference path="services/parameter.ts" />
@@ -27,7 +26,7 @@ module tsApp {
 
       // @ngInject
       this.app.config(function($stateProvider: angular.ui.IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider) {
-        
+
         // Default state
         $urlRouterProvider.otherwise('/');
 
@@ -86,7 +85,7 @@ module tsApp {
           });
 
       });
-      
+
       this.app.run(function(){
         console.log('[App] running');
       });

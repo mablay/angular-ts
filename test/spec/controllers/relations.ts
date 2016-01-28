@@ -7,7 +7,7 @@
 describe('Controller: RelationsCtrl', () => {
 
   // load the controller's module
-  beforeEach(module('ecoSimApp'));
+  beforeEach(module('tsApp'));
 
   var RelationsCtrl: tsApp.RelationsCtrl,
     scope: tsApp.IRelationsScope;

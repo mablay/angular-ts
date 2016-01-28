@@ -7,7 +7,7 @@
 describe('Controller: MainCtrl', () => {
 
   // load the controller's module
-  beforeEach(module('ecoSimApp'));
+  beforeEach(module('tsApp'));
 
   var MainCtrl: tsApp.MainCtrl,
     scope: tsApp.IMainScope;

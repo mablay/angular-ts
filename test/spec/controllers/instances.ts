@@ -7,7 +7,7 @@
 describe('Controller: InstancesCtrl', () => {
 
   // load the controller's module
-  beforeEach(module('ecoSimApp'));
+  beforeEach(module('tsApp'));
 
   var InstancesCtrl: tsApp.InstancesCtrl,
     scope: tsApp.IInstancesScope;

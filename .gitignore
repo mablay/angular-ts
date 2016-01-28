@@ -6,3 +6,7 @@
 /.idea
 /typings
 .DS_Store
+/app/**/*.js
+/test/**/*.js
+/app/**/*.map
+/test/**/*.map

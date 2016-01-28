@@ -1,5 +1,6 @@
 /// <reference path="../app.ts" />
 
+import NavigationCtrl = tsApp.NavigationCtrl;
 'use strict';
 
 module tsApp {
@@ -8,6 +9,8 @@ module tsApp {
 	}
 
 	export class NavigationCtrl {
+    static IID = 'NavigationCtrl';
+
 		// @ngInject
 		constructor(private $scope: INavigationScope) {
 			$scope.menuItems = [
@@ -22,6 +25,5 @@ module tsApp {
 	}
 }
 
-angular.module('tsApp')
-	.controller('NavigationCtrl', tsApp.NavigationCtrl);
+angular.module(tsApp.MODULE_NAME).controller(tsApp.NavigationCtrl.IID, tsApp.NavigationCtrl);
 

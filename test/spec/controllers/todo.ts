@@ -1,21 +1,21 @@
 /// <reference path="../../../typings/angularjs/angular-mocks.d.ts" />
 /// <reference path="../../../typings/jasmine/jasmine.d.ts" />
-/// <reference path="../../../app/scripts/controllers/about.ts" />
+/// <reference path="../../../app/scripts/controllers/todo.ts" />
 
 'use strict';
 
-describe('Controller: AboutCtrl', () => {
+describe('Controller: TodoCtrl', () => {
 
   // load the controller's module
   beforeEach(module('tsApp'));
 
-  var AboutCtrl: tsApp.AboutCtrl,
-    scope: tsApp.IAboutScope;
+  var TodoCtrl: tsApp.TodoCtrl,
+    scope: tsApp.ITodoScope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(($controller: ng.IControllerService, $rootScope: ng.IRootScopeService) => {
     scope = <any>$rootScope.$new();
-    AboutCtrl = $controller('AboutCtrl', {
+    TodoCtrl = $controller('TodoCtrl', {
       $scope: scope
     });
   }));

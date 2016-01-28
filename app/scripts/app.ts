@@ -1,20 +1,26 @@
 /// <reference path="../../typings/browser.d.ts" />
 
-/// <reference path="models/status-model.ts" />
-/// <reference path="models/system-model.ts" />
-/// <reference path="services/parameter.ts" />
-/// <reference path="services/relation.ts" />
+
+/// <reference path="controllers/main.ts" />
+/// <reference path="services/todo.ts" />
 
 
 module tsApp {
   'use strict';
 
+  // *** MODULE NAME ***
+  // This name will be used  as the angular module name
+  // throughout the App and its controllers, services, etc.
+  export var MODULE_NAME = 'tsApp';
+
   export class App {
 
     app: ng.IModule;
 
-    constructor(name: string) {
-      this.app = angular.module(name, [
+    constructor() {
+      console.log('[Constructor] name: %o', tsApp.MODULE_NAME);
+
+      this.app = angular.module(MODULE_NAME, [
         'ngAnimate',
         'ngCookies',
         'ngResource',
@@ -43,7 +49,7 @@ module tsApp {
           .state('public.home', {
             url: '/',
             templateUrl: 'views/main.html',
-            controller: 'MainCtrl',
+            controller: tsApp.MainCtrl.IID,
             controllerAs: 'vc'
           })
           .state('public.login', {
@@ -104,6 +110,6 @@ module tsApp {
 
 
 
-  new tsApp.App('tsApp').bootstrapWhenReady();
+  new tsApp.App().bootstrapWhenReady();
 
 }

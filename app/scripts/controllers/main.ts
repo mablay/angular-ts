@@ -1,5 +1,6 @@
 /// <reference path="../app.ts" />
 
+import MainCtrl = tsApp.MainCtrl;
 'use strict';
 
 module tsApp {
@@ -8,6 +9,8 @@ module tsApp {
   }
 
   export class MainCtrl {
+    static IID = 'MainCtrl';
+
     // @ngInject
     constructor (private $scope: IMainScope) {
 
@@ -17,5 +20,5 @@ module tsApp {
   }
 }
 
-angular.module('tsApp')
-  .controller('MainCtrl', tsApp.MainCtrl);
+angular.module(tsApp.MODULE_NAME)
+  .controller(tsApp.MainCtrl.IID, tsApp.MainCtrl);

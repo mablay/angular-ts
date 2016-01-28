@@ -7,7 +7,7 @@
 describe('Service: Relation', () => {
 
   // load the service's module
-  beforeEach(module('ecoSimApp'));
+  beforeEach(module('tsApp'));
 
   // instantiate service
   var Relation;

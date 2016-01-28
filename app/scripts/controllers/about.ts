@@ -2,7 +2,7 @@
 
 'use strict';
 
-module ecoSimApp {
+module tsApp {
   export interface IAboutScope extends ng.IScope {
     awesomeThings: any[];
   }
@@ -19,5 +19,5 @@ module ecoSimApp {
   }
 }
 
-angular.module('ecoSimApp')
-  .controller('AboutCtrl', ecoSimApp.AboutCtrl);
+angular.module('tsApp')
+  .controller('AboutCtrl', tsApp.AboutCtrl);

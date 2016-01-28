@@ -7,7 +7,7 @@
 describe('Service: Parameter', () => {
 
   // load the service's module
-  beforeEach(module('ecoSimApp'));
+  beforeEach(module('tsApp'));
 
   // instantiate service
   var Parameter;

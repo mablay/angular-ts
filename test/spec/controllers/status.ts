@@ -7,7 +7,7 @@
 describe('Controller: StatusCtrl', () => {
 
   // load the controller's module
-  beforeEach(module('ecoSimApp'));
+  beforeEach(module('tsApp'));
 
   var StatusCtrl: tsApp.StatusCtrl,
     scope: tsApp.IStatusScope;

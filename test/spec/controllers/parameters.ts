@@ -7,7 +7,7 @@
 describe('Controller: ParametersCtrl', () => {
 
   // load the controller's module
-  beforeEach(module('ecoSimApp'));
+  beforeEach(module('tsApp'));
 
   var ParametersCtrl: tsApp.ParametersCtrl,
     scope: tsApp.IParametersScope;

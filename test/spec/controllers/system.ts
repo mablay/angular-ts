@@ -7,7 +7,7 @@
 describe('Controller: SystemCtrl', () => {
 
   // load the controller's module
-  beforeEach(module('ecoSimApp'));
+  beforeEach(module('tsApp'));
 
   var SystemCtrl: tsApp.SystemCtrl,
     scope: tsApp.ISystemScope;

@@ -188,14 +188,14 @@ module.exports = function (grunt) {
             }
           }
       }
-    }, 
+    },
     // Compiles TypeScript to JavaScript
     typescript: {
       base: {
         src: ['<%= yeoman.app %>/scripts/{,*/}*.ts'],
         dest: '.tmp/scripts',
         options: {
-          module: 'amd', //or commonjs
+          module: 'commonjs', //or commonjs
           target: 'es5', //or es3
           'base_path': '<%= yeoman.app %>/scripts', //quoting base_path to get around jshint warning.
           sourcemap: true,
@@ -215,7 +215,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    tsd: {
+/*    tsd: {
       refresh: {
         options: {
           // execute a command
@@ -224,7 +224,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+*/
 
     // Renames files for browser caching purposes
     filerev: {
@@ -343,7 +343,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'ecoSimApp',
+          module: 'tsApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -444,7 +444,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
-      'tsd:refresh',
+//      'tsd:refresh',
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
@@ -460,7 +460,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'wiredep',
-    'tsd:refresh',
+//    'tsd:refresh',
     'concurrent:test',
     'autoprefixer',
     'connect:test',
@@ -470,7 +470,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
-    'tsd:refresh',
+//    'tsd:refresh',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',

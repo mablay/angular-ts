@@ -4,17 +4,15 @@ import MainCtrl = tsApp.MainCtrl;
 'use strict';
 
 module tsApp {
-  export interface IMainScope extends ng.IScope {
-    awesomeThings: any[];
-  }
 
   export class MainCtrl {
     static IID = 'MainCtrl';
 
     // @ngInject
-    constructor (private $scope: IMainScope) {
+    constructor () {
 
-      console.log('[MainCtrl] constructor');
+
+      console.log('[MainCtrl] constructor ');
 
     }
   }

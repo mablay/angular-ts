@@ -7,7 +7,6 @@
     "angular-sanitize": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-sanitize.d.ts#f23cd55e319a0f67362ca0dbc4cf3e2ec1339f4e",
     "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#4f7b7e01d3a9622bfab0bef469e169529e60c66b",
     "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#f23cd55e319a0f67362ca0dbc4cf3e2ec1339f4e",
-    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#4f7b7e01d3a9622bfab0bef469e169529e60c66b",
-    "lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#86dbea8fc37d9473fee465da4f0a21bea4f8cbd9"
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#4f7b7e01d3a9622bfab0bef469e169529e60c66b"
   }
 }

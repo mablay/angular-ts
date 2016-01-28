@@ -30,6 +30,10 @@ body {
   padding-bottom: 19px;
 }
 
+.main-view {
+  padding-top: 100px;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;

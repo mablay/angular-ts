@@ -5,8 +5,12 @@
 /// <reference path="services/todo.ts" />
 
 
+// Workaround: lodash currently causes problems with typescript
+declare var _;
+
 module tsApp {
   'use strict';
+
 
   // *** MODULE NAME ***
   // This name will be used  as the angular module name
@@ -56,7 +60,7 @@ module tsApp {
             url: '/login',
             templateUrl: 'views/login.html',
             controller: 'LoginCtrl',
-            controllerAs: 'login'
+            controllerAs: 'loginCtrl'
           })
           .state('public.register', {
             url: '/register',
